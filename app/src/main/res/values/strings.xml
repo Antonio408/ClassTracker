@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ClassTracker</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="no_location_detected">No Location found</string>
+    <string name="latitude_label">Latitude</string>
+    <string name="longitude_label">Longitude</string>
+    <string name="record_location_label">Record Location</string>
+    <string name="location_label">Enter Location</string>
+    <string name="edit_location_label">Location</string>
+    <string name="action_settings">Settings</string>
+</resources>
