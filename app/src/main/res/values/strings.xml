@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ClassTracker</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_maps">ClassTracker Maps</string>
+    <string name="title_activity_main">ClassTracker Locations</string>
     <string name="no_location_detected">No Location found</string>
     <string name="latitude_label">Latitude</string>
     <string name="longitude_label">Longitude</string>

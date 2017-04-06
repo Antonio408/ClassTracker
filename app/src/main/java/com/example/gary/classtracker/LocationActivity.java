@@ -46,7 +46,7 @@ Setup variables and constants to call list intent to add the current location an
     private LocationRequest mLocationRequest;
 
     private Location mLastLocation;
-    private Location currentLocation;
+
 
     private String mLatitudeLabel;
     private String mLongitudeLabel;
@@ -100,11 +100,10 @@ Setup variables and constants to call list intent to add the current location an
                 double longitude = 0;
                 EditText et = (EditText) findViewById(R.id.location_editText);
                 String s = et.getText().toString();
+                GetLocation();
                 // make sure the location exists
-                if (currentLocation != null) {
-                    latitude = currentLocation.getLatitude();
-                    longitude = currentLocation.getLongitude();
-                } else if (mLastLocation != null) {
+
+                if (mLastLocation != null) {
                     latitude = mLastLocation.getLatitude();
                     longitude = mLastLocation.getLongitude();
                 }
@@ -196,6 +195,10 @@ Setup variables and constants to call list intent to add the current location an
         } */
         Log.i(LocationActivity.class.getSimpleName(), "Connected to Google Play Services!");
 
+        GetLocation();
+    }
+
+    private void GetLocation () {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
@@ -240,7 +243,7 @@ Setup variables and constants to call list intent to add the current location an
     // when location has changed update currrent location
     @Override
     public void onLocationChanged(Location location) {
-        currentLocation = location;
+        mLastLocation = location;
     }
 
 
